@@ -1,0 +1,32 @@
+= partial 'shared/navigation_menu', :locals => {:page => current_page}
+%br
+
+= current_page.page_title
+%br
+%br
+
+- current_page.category_breadcrumbs.each do |item|
+  -if item[:link]
+    %a{ :href => item[:link] }=item[:text]
+  -else
+    =item[:text]
+%br
+
+- current_page.categories.each do |item|
+  %a{ :href => item[:link] }=item[:text]
+  =item[:additional_info] if item[:additional_info]
+%br
+%br
+
+- current_page.item_titles.each do |item|
+  %a{ :href => item[:link] }=item[:text]
+%br
+%br
+
+- current_page.items.each do |item|
+  = item[:first_time]
+  %a{ :href => item[:link] }="Info"
+  %a{ :href => item[:link] + "?autoplay=1" }=item[:name]
+  = item[:year]
+  = item[:how_long]
+  %br

@@ -1,0 +1,19 @@
+%p
+  =title.nil? ? page.title : title
+
+%table{:border => "0"}
+  - page.items.each do |item|
+    %tr
+      %td
+        ="{" if item.folder?
+        %a{ :href => item.link }=item.text
+        ="}..." if item.folder?
+      %td
+        =item.underscore_name
+      %td
+        =item.media_file if not item.media_file.nil? and item.media_file.size > 0
+      %td
+        =item.duration if not item.duration.nil? and item.duration.size > 0
+      /%td
+      /-if item.rating_image
+      /%img{:src => item.rating_image}

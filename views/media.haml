@@ -1,0 +1,23 @@
+= partial 'shared/navigation_menu', :locals => {:page => page}
+%br
+
+- page.category_breadcrumbs.each do |item|
+  -if item[:link]
+    %a{ :href => item[:link] }=item[:text]
+  -else
+    =item[:text]
+%br
+%br
+
+="Link:"
+%br
+
+%p
+  ="Name: #{link_info.text}"
+%p
+  ="Name2: #{link_info.name}"
+%p
+  ="Media File: #{link_info.media_file}"
+%p
+  ="URL: #{link_info.link}"
+  %a{ :href => link_info.link }=link_info.name

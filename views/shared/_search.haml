@@ -1,0 +1,6 @@
+%form{ :action => '/cgi-bin/video/eitv_browse.fcgi', :method => "get" }
+  %input{ :type => 'hidden', :name => 'action', :value => 'search' }
+  %input{ :type => 'hidden', :name => 'order_direction', :value => '-' }
+  %input#keywords{ :name => 'keywords' }
+  %button{:type => "submit"}="Search"
+%br

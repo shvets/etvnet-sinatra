@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="main-remote" type="RubyRemoteDebugConfigurationType" factoryName="Ruby remote debug">
+    <RUBY_REMOTE_DEBUG_CONFIG NAME="REMOTE_HOST" VALUE="localhost" />
+    <RUBY_REMOTE_DEBUG_CONFIG NAME="PORT" VALUE="1234" />
+    <RUBY_REMOTE_DEBUG_CONFIG NAME="REMOTE_ROOT" VALUE="$PROJECT_DIR$" />
+    <RUBY_REMOTE_DEBUG_CONFIG NAME="LOCAL_ROOT" VALUE="$PROJECT_DIR$" />
+    <RunnerSettings RunnerId="RubyRemoteDebugRunner" />
+    <ConfigurationWrapper RunnerId="RubyRemoteDebugRunner" />
+    <method />
+  </configuration>
+</component>

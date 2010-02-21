@@ -1,0 +1,10 @@
+%p
+  =title.nil? ? page.title : title
+
+%table{:border => "0"}
+  - page.items.each do |item|
+    %tr
+      %td
+        ="{" if item.folder?
+        %a{ :href => item.link }=item.text
+        ="}..." if item.folder?
