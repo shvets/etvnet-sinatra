@@ -1,24 +1,17 @@
 require 'rubygems'
 
 require 'sinatra'
-require 'haml'
 require 'sinatra/base'
-
-#use Rack::Auth::Basic do |username, password|
-#  [username, password] == ['admin', 'admin']
-#end
-
-#$LOAD_PATH.unshift File.dirname(__FILE__) + '/domain'
+require 'haml'
+require 'open-uri'
+require 'json'
 
 require 'page/page_factory'
 require 'page/access_page'
 require 'link_info'
-
 require 'cookie_helper'
-require 'partial'
 
-require 'open-uri'
-require 'json'
+require 'partial'
 
 class EtvNet < Sinatra::Base
   COOKIE_FILE_NAME = ENV['HOME'] + "/.etvnet-seek"
@@ -26,16 +19,12 @@ class EtvNet < Sinatra::Base
   set :haml, {:format => :html5, :attr_wrapper => '"'}
   set :views, File.dirname(__FILE__) + '/../views'
   set :public, File.dirname(__FILE__) + '/../public'
-
-#  set :data, File.join(File.dirname(__FILE__), *%w[.. data])
-
   set :sessions, true
 
   attr_reader :current_page
 
   def initialize
-    @cookie_helper = CookieHelper.new COOKIE_FILE_NAME do
-    end
+    @cookie_helper = CookieHelper.new COOKIE_FILE_NAME
   end
 
   get '/javascripts/*' do
@@ -43,7 +32,13 @@ class EtvNet < Sinatra::Base
   end
 
   get '/' do
-    haml :index
+    main_page = PageFactory.create("main")
+    best_ten_page = PageFactory.create("best_ten")
+    popular_page = PageFactory.create("popular")
+    we_recommend_page = PageFactory.create("we_recommend")
+
+    haml :index, :locals => {:main_page => main_page, :best_ten_page => best_ten_page,
+                             :popular_page => popular_page, :we_recommend_page => we_recommend_page}
   end
 
   get '/login' do
@@ -51,7 +46,7 @@ class EtvNet < Sinatra::Base
   end
 
   post "/login" do
-    page = LoginPage.new
+    page = PageFactory.create("login")
 
     cookie = page.login(request[:username], request[:pwd])
 
@@ -60,72 +55,52 @@ class EtvNet < Sinatra::Base
     redirect session[:original_path]
   end
 
-  get '/main_menu' do
-    page = PageFactory.create("main")
-
-    haml :main_menu, :locals => {:page => page, :title => "Main Menu"}
-  end
-
-  get '/best_ten' do
-    page = PageFactory.create("best_ten")
-
-    haml :display_items, :locals => {:page => page, :title => "Best Ten"}
-  end
-
-  get '/popular_movies_and_serials' do
-    page = PageFactory.create("popular")
-
-    haml :display_items, :locals => {:page => page, :title => "Popular Movies and Serials"}
-  end
-
-  get '/we_recommend' do
-    page = PageFactory.create("we_recommend")
-
-    haml :display_items, :locals => {:page => page, :title => "We Recommend"}
-  end
-
   get '/announces.html' do
-    page = PageFactory.create("announces", request.fullpath)
+    page = PageFactory.create("announces")
 
     haml :display_items, :locals => {:page => page, :title => "Announces"}
   end
 
   get '/freeTV.html' do
-    page = PageFactory.create("freetv", request.fullpath)
+    page = PageFactory.create("freetv")
 
     haml :display_items, :locals => {:page => page, :title => "Free TV"}
   end
 
   get '/cgi-bin/video/eitv_browse.fcgi' do
+    url = request.fullpath
+
     title = title_for_category params[:category]
 
-    case request.fullpath
+    case url
       when /category=/ then
-        page = PageFactory.create("media", request.fullpath)
+        page = PageFactory.create("media", url)
 
         haml :display_items, :locals => {:page => page, :title => title}
       when /action=channels/ then
-        page = PageFactory.create("channels", request.fullpath)
+        page = PageFactory.create("channels", url)
 
-        haml :channels, :locals => {:page => page, :title => title}
+        haml :display_channel_items, :locals => {:page => page, :title => title}
+      when /action=view_recommended/ then
+        page = PageFactory.create("media", url)
+
+        haml :display_items, :locals => {:page => page, :title => "We Recommend"}
       when /channel=/ then
-        case request.fullpath
+        case url
           when /action=today/
             title = "Today List"
           else
-           title = "Archive List"
+            title = "Archive List"
         end
 
-        page = PageFactory.create("media", request.fullpath)
+        page = PageFactory.create("media", url)
 
-        haml :display_items, :locals => {:page => page, :title => title}
+        haml :display_browse_items, :locals => {:page => page, :title => title}
+      else
+        page = PageFactory.create("media", url)
+
+        haml :display_items, :locals => {:page => page, :title => "Archive List for all Channels"}
     end
-  end
-
-  get %r{/action=channels/} do
-    page = PageFactory.create("channels")
-
-    haml :display_items, :locals => {:page => page, :title => "Channels"}
   end
 
   get '/media/*' do
@@ -181,6 +156,16 @@ class EtvNet < Sinatra::Base
 
   helpers do
     include Partial
+
+    def display_link item
+      link = "<a href='#{item.link}'>#{item.text}</a>"
+
+      if item.folder?
+        link = "{#{link}}..."
+      end
+
+      link
+    end
   end
 end
 

@@ -2,14 +2,42 @@
 %br
 %br
 
-%a{ :href => 'main_menu' }="Main Menu"
-%br
+%table{:border => "0"}
+  - main_page.items.each do |item|
+    %tr
+      %td
+        %a{ :href => item.link }=item.text
 
-%a{ :href => 'best_ten' }="Best 10"
-%br
+%p
+  ="Best Ten"
 
-%a{ :href => 'popular_movies_and_serials' }="Popular Movies and Serials"
-%br
+%table{:border => "0"}
+  - best_ten_page.items.each do |item|
+    %tr
+      %td
+        %a{ :href => item.link }=item.text
+      %td
+        =item.channel
 
-%a{ :href => 'we_recommend' }="We Recommend"
+%p
+  ="Popular Movies and Serials"
+
+%table{:border => "0"}
+  - popular_page.items.each do |item|
+    %tr
+      %td
+        %a{ :href => item.link }=item.text
+      %td
+        =item.channel
+
+%p
+  ="We Recommend"
+
+%table{:border => "0"}
+  - we_recommend_page.items.each do |item|
+    %tr
+      %td
+        %a{ :href => item.link }=item.text
+      %td
+        =item.channel
 %br

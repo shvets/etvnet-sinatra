@@ -24,16 +24,12 @@
   - page.items.each do |item|
     %tr
       %td
-        =display_link(item)
-
-      - if not item.duration.nil? and item.duration.size > 0
-        %td
-          =item.duration
-
-      -if item.rating_image
-        %td
-          %img{:src => item.rating_image}
-          
-      -if item.image
-        %td
-          %img{:src => "#{Page::BASE_URL}/#{item.image}"}
+        =item.showtime
+      %td
+        %a{ :href => item.link }="Info"
+      %td
+        %a{ :href => item.link + "?autoplay=1" }=item.text
+      %td
+        = item.year
+      %td
+        =item.duration

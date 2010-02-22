@@ -1,5 +1,5 @@
 - page.navigation_menu.each_with_index do |item, index|
-  %a{ :href => item[:link].gsub('.html', '.haml')  }=item[:text]
+  %a{ :href => item.link }=item.text
   - if index == 5
     %br
 %br

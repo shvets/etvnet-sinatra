@@ -1,8 +1,0 @@
-= "Announces"
-%br
-%br
-
-- current_page.items.each_with_index do |item, index|
-  - next if index < 2
-  %a{ :href => item[:link].gsub('.html', '.haml')  }=item[:text]
-  %br
