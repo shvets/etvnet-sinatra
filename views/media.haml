@@ -1,23 +1,33 @@
 = partial 'shared/navigation_menu', :locals => {:page => page}
 %br
 
-- page.category_breadcrumbs.each do |item|
-  -if item[:link]
-    %a{ :href => item[:link] }=item[:text]
-  -else
-    =item[:text]
-%br
-%br
-
-="Link:"
-%br
+%p
+  ="Link:"
+  %a{ :href => link_info.media_info.link }=link_info.media_info.name
 
 %p
-  ="Name: #{link_info.text}"
+  ="Latin Name: #{link_info.name}"
+
 %p
-  ="Name2: #{link_info.name}"
+  ="Description: #{link_info.media_info.description}"
+
 %p
-  ="Media File: #{link_info.media_file}"
+  ="Description Production: #{link_info.media_info.description_production}"
+
 %p
-  ="URL: #{link_info.link}"
-  %a{ :href => link_info.link }=link_info.name
+  ="Language: #{(link_info.media_info.speech_lang == '2' ) ? 'Russian' : ''}"
+
+%p
+  ="channel: #{link_info.media_info.channel}"
+
+%p
+  ="datetime: #{link_info.media_info.datetime}"
+
+%p
+  ="popularity: #{link_info.media_info.popularity}"
+
+%p
+  ="duration: #{link_info.media_info.duration}"
+
+%p
+  ="rating: #{link_info.media_info.rating}"
