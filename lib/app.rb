@@ -6,6 +6,8 @@ require 'haml'
 require 'open-uri'
 require 'json'
 
+$:.unshift(File.expand_path(File.join(File.dirname(__FILE__))))
+
 require 'page/page_factory'
 require 'page/access_page'
 require 'link_info'
@@ -13,15 +15,13 @@ require 'cookie_helper'
 
 require 'partial'
 
-class EtvNet < Sinatra::Base
+class App < Sinatra::Base
   COOKIE_FILE_NAME = ENV['HOME'] + "/.etvnet-seek"
   
   set :haml, {:format => :html5, :attr_wrapper => '"'}
   set :views, File.dirname(__FILE__) + '/../views'
   set :public, File.dirname(__FILE__) + '/../public'
   set :sessions, true
-
-  attr_reader :current_page
 
   def initialize
     @cookie_helper = CookieHelper.new COOKIE_FILE_NAME
@@ -169,6 +169,5 @@ class EtvNet < Sinatra::Base
   end
 end
 
-EtvNet.run! :port => 4567
 
 

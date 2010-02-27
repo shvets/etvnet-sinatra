@@ -1,9 +1,13 @@
-$:.unshift(File.expand_path(File.join(File.dirname(__FILE__), "lib")))
-
-require "etv_net"
+require "lib/app"
 
 trap(:INT) { exit }
 
-#run EtvNet
+app = Rack::Builder.new {
+ use Rack::CommonLogger
+ run App
+}.to_app
+
+Rack::Handler::Mongrel.run app, :Port => 4567
+
 
 
