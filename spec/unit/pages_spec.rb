@@ -71,7 +71,6 @@ describe "today page" do
     @page.category_breadcrumbs.size.should > 0
     @page.categories.size.should > 0
     @page.items.size.should > 0
-#    @page.item_titles.size.should > 0
   end
 end
 

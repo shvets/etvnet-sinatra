@@ -1,24 +1,20 @@
-= partial 'shared/navigation_menu', :locals => {:page => page}
-%br
-
 %p
   =title.nil? ? page.title : title
-
-- page.category_breadcrumbs.each do |item|
-  -if item[:link]
-    %a{ :href => item[:link] }=item[:text]
-  -else
-    =item[:text]
-%br
-
-- page.categories.each do |item|
-  %a{ :href => item[:link] }=item[:text]
-  =item[:additional_info] if item[:additional_info]
+  
+= partial 'shared/navigation_menu', :locals => {:page => page}
 %br
 %br
 
-- page.item_titles.each do |item|
-  %a{ :href => item.link }=item.text
+= partial 'shared/category_breadcrumbs', :locals => {:page => page}
+%br
+%br
+
+= partial 'shared/categories', :locals => {:page => page}
+%br
+%br
+
+= partial 'shared/title_items', :locals => {:page => page}
+%br
 
 %table{:border => "0"}
   - page.items.each do |item|
@@ -26,10 +22,19 @@
       %td
         =item.showtime
       %td
-        %a{ :href => item.link }="Info"
-      %td
-        %a{ :href => item.link + "?autoplay=1" }=item.text
+        =display_link_or_folder(item)
       %td
         = item.year
-      %td
-        =item.duration
+
+      - if not item.duration.nil? and item.duration.size > 0
+        %td
+          =item.duration
+
+      -if item.rating_image
+        %td
+          %img{:src => item.rating_image}
+
+      -if item.image
+        %td
+          %img{:src => "#{Page::BASE_URL}/#{item.image}"}
+

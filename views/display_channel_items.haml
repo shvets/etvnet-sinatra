@@ -1,18 +1,13 @@
+%p
+  ="Channels"
+
 = partial 'shared/navigation_menu', :locals => {:page => page}
 %br
 
-- page.category_breadcrumbs.each do |item|
-  -if item[:link]
-    %a{ :href => item[:link] }=item[:text]
-  -else
-    =item[:text]
-%br
+= partial 'shared/category_breadcrumbs', :locals => {:page => page}
 %br
 
 = partial 'shared/search'
-
-= page.title
-%br
 %br
 
 %table

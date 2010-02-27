@@ -73,10 +73,17 @@ class App < Sinatra::Base
     title = title_for_category params[:category]
 
     case url
-      when /category=/ then
+      when /(category=|channel=)/ then
+       case url
+          when /action=today/
+            title = "Today List" + (title.nil? ? "" : ": #{title}")
+          else
+            title = "Archive List" + (title.nil? ? "" : ": #{title}")
+        end
+
         page = PageFactory.create("media", url)
 
-        haml :display_items, :locals => {:page => page, :title => title}
+        haml :display_browse_items, :locals => {:page => page, :title => title}
       when /action=channels/ then
         page = PageFactory.create("channels", url)
 
@@ -84,22 +91,11 @@ class App < Sinatra::Base
       when /action=view_recommended/ then
         page = PageFactory.create("media", url)
 
-        haml :display_items, :locals => {:page => page, :title => "We Recommend"}
-      when /channel=/ then
-        case url
-          when /action=today/
-            title = "Today List"
-          else
-            title = "Archive List"
-        end
-
-        page = PageFactory.create("media", url)
-
-        haml :display_browse_items, :locals => {:page => page, :title => title}
+        haml :display_browse_items, :locals => {:page => page, :title => "We Recommend"}
       else
         page = PageFactory.create("media", url)
 
-        haml :display_items, :locals => {:page => page, :title => "Archive List for all Channels"}
+        haml :display_browse_items, :locals => {:page => page, :title => "Archive List for all Channels"}
     end
   end
 
@@ -150,21 +146,30 @@ class App < Sinatra::Base
       when '1P4M' then 'Music'
       when '1P3S' then 'Sport'
     else
-      ""
+      nil
     end
   end
 
   helpers do
     include Partial
 
-    def display_link item
-      link = "<a href='#{item.link}'>#{item.text}</a>"
+    def display_link_or_folder item
+      result = "<a href='#{item.link}'>#{item.text}</a>"
 
       if item.folder?
-        link = "{#{link}}..."
+        "{#{result}}..."
+      else
+        result
       end
+    end
 
-      link
+
+    def display_link_or_text item
+      if item.link
+        "<a href='#{item.link}'>#{item.text}</a>"
+      else
+        item.text
+      end
     end
   end
 end

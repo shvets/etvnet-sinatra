@@ -1,0 +1,3 @@
+- page.categories.each do |item|
+  %a{ :href => item.link }=item.text
+  =item.additional_info if item.additional_info

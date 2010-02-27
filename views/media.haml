@@ -1,5 +1,14 @@
 = partial 'shared/navigation_menu', :locals => {:page => page}
 %br
+%br
+
+= partial 'shared/category_breadcrumbs', :locals => {:page => page}
+%br
+%br
+
+= partial 'shared/categories', :locals => {:page => page}
+%br
+%br
 
 %p
   ="Link:"
@@ -18,16 +27,16 @@
   ="Language: #{(link_info.media_info.speech_lang == '2' ) ? 'Russian' : ''}"
 
 %p
-  ="channel: #{link_info.media_info.channel}"
+  ="Channel: #{link_info.media_info.channel}"
 
 %p
-  ="datetime: #{link_info.media_info.datetime}"
+  ="Datetime: #{link_info.media_info.datetime}"
 
 %p
-  ="popularity: #{link_info.media_info.popularity}"
+  ="Popularity: #{link_info.media_info.popularity}"
 
 %p
-  ="duration: #{link_info.media_info.duration}"
+  ="Duration: #{link_info.media_info.duration} min."
 
 %p
-  ="rating: #{link_info.media_info.rating}"
+  ="Rating: #{link_info.media_info.rating}/1000"
