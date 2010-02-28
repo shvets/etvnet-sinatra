@@ -1,4 +1,4 @@
-require 'rubygems'
+require 'rubygems' unless RUBY_VERSION =~ /1.9.*/
 
 require 'sinatra'
 require 'sinatra/base'
@@ -8,14 +8,13 @@ require 'json'
 
 $:.unshift(File.expand_path(File.join(File.dirname(__FILE__))))
 
-require 'page/page_factory'
-require 'page/access_page'
-require 'link_info'
-require 'cookie_helper'
+require 'etvnet_seek/core/page_factory'
+require 'etvnet_seek/link_info'
+require 'etvnet_seek/cookie_helper'
 
 require 'partial'
 
-class App < Sinatra::Base
+class App < Sinatra::Application
   COOKIE_FILE_NAME = ENV['HOME'] + "/.etvnet-seek"
   
   set :haml, {:format => :html5, :attr_wrapper => '"'}
