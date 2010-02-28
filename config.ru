@@ -7,7 +7,7 @@ app = Rack::Builder.new {
  run App
 }.to_app
 
-Rack::Handler::Mongrel.run app, :Port => 4567
-
+#Rack::Handler::Mongrel.run app, :Port => 4567
+run app
 
 
