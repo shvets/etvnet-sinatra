@@ -11,6 +11,7 @@ $:.unshift(File.expand_path(File.join(File.dirname(__FILE__))))
 require 'etvnet_seek/core/page_factory'
 require 'etvnet_seek/link_info'
 require 'etvnet_seek/cookie_helper'
+require 'base_page'
 
 require 'partial'
 
@@ -76,13 +77,14 @@ class App < Sinatra::Application
        case url
           when /action=today/
             title = "Today List" + (title.nil? ? "" : ": #{title}")
+            page = PageFactory.create("media", url)
+            haml :display_browse_items, :locals => {:page => page, :title => title}
           else
             title = "Archive List" + (title.nil? ? "" : ": #{title}")
+            page = PageFactory.create("archive_media", url)
+            haml :display_archive_items, :locals => {:page => page, :title => title}
         end
 
-        page = PageFactory.create("media", url)
-
-        haml :display_browse_items, :locals => {:page => page, :title => title}
       when /action=channels/ then
         page = PageFactory.create("channels", url)
 
@@ -92,9 +94,9 @@ class App < Sinatra::Application
 
         haml :display_browse_items, :locals => {:page => page, :title => "We Recommend"}
       else
-        page = PageFactory.create("media", url)
+        page = PageFactory.create("archive_media", url)
 
-        haml :display_browse_items, :locals => {:page => page, :title => "Archive List for all Channels"}
+        haml :display_archive_items, :locals => {:page => page, :title => "Archive List for all Channels"}
     end
   end
 

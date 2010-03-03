@@ -20,12 +20,16 @@
       %td
         =item.showtime
       %td
+        %img{:src => "#{Page::BASE_URL}/#{item.rating_image}"}
+      %td
+        =item.rating
+      %td
         =display_link_or_folder(item)
       %td
-        = item.year
-
-      - if not item.duration.nil? and item.duration.size > 0
-        %td
-          =item.duration
+        =item.year
+      %td
+        =item.duration
+      %td
+        =item.channel
 
 

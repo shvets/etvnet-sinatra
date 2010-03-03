@@ -4,7 +4,7 @@ trap(:INT) { exit }
 
 app = Rack::Builder.new {
  use Rack::CommonLogger
- run App
+ use App
 }.to_app
 
 run app

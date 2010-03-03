@@ -1,5 +1,6 @@
-- page.navigation_menu.each_with_index do |item, index|
+- page.navigation_menu.each do |item|
   %a{ :href => item.link }=item.text
-  - if index == 5
-    %br
 
+-if page.navigation_menu.size > 0
+  %br
+  %br
