@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
-    <file url="file://$PROJECT_DIR$/../../../.rvm/gems/ruby/1.8.7/gems/etvnet_seek-0.4.0/lib/page/base_page.rb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spec/unit/pages_spec.rb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/views/display_channel_items.haml" charset="MacRoman" />
   </component>
