@@ -1,12 +1,3 @@
-%p
-  ="Channels"
-  = partial 'shared/search'
-  %br
-  
-= partial 'shared/navigation_menu', :locals => {:page => page}
-
-= partial 'shared/category_breadcrumbs', :locals => {:page => page}
-
 %table
   - page.items.each do |item|
     %tr

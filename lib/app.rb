@@ -31,18 +31,13 @@ class App < Sinatra::Application
     open("#{File.dirname(__FILE__)}/../public/javascripts/#{params[:splat]}")
   end
 
-  get '/' do
-    main_page = PageFactory.create("main")
-    best_ten_page = PageFactory.create("best_ten")
-    popular_page = PageFactory.create("popular")
-    we_recommend_page = PageFactory.create("we_recommend")
-
-    haml :index, :locals => {:main_page => main_page, :best_ten_page => best_ten_page,
-                             :popular_page => popular_page, :we_recommend_page => we_recommend_page}
+  get '/stylesheet.css' do
+    header 'Content-Type' => 'text/css; charset=utf-8'
+    sass :stylesheet
   end
 
   get '/login' do
-    haml :login
+    haml :login, :layout => :simple_layout
   end
 
   post "/login" do
@@ -55,6 +50,17 @@ class App < Sinatra::Application
     redirect session[:original_path]
   end
 
+  get '/' do
+    main_page = PageFactory.create("main")
+    best_ten_page = PageFactory.create("best_ten")
+    popular_page = PageFactory.create("popular")
+    we_recommend_page = PageFactory.create("we_recommend")
+
+    haml :index, :layout => :simple_layout,
+          :locals => {:main_page => main_page, :best_ten_page => best_ten_page,
+                      :popular_page => popular_page, :we_recommend_page => we_recommend_page}
+  end
+  
   get '/announces.html' do
     page = PageFactory.create("announces")
 
@@ -131,7 +137,7 @@ class App < Sinatra::Application
         else
           link_info = LinkInfo.new(current_item, media_info)
 
-          haml :media, :locals => {:page => page, :link_info => link_info}
+          haml :display_media, :locals => {:page => page, :link_info => link_info}
         end
       end
     end
@@ -167,7 +173,9 @@ class App < Sinatra::Application
 
     def display_link_or_text item
       if item.link
-        "<a href='#{item.link}'>#{item.text}</a>"
+        result = "<a href='#{item.link}'>#{item.text}</a>"
+
+        item.additional_info ? result + item.additional_info : result
       else
         item.text
       end

@@ -7,7 +7,7 @@ class BasePage
       text = item.children.at(0).content
       href = item['href']
 
-      list <<  MediaItem.new(text, href) unless href =~ /(login|signup)/
+      list <<  MediaItem.new(text, href) unless href =~ /(login|signup|thematic)/
     end
 
     list
@@ -34,18 +34,18 @@ class BasePage
   def categories
     list = []
 
-    unless url =~ /(action=browse_container|action=search)/
+    unless url =~ /(action=browse_container|action=search|action=channels|media)/
       document.css("table").each_with_index do |table1, index1|
         if index1 == 5
           table1.css("tr/td/table/tr/td/table").each_with_index do |table2, index2|
             if index2 == 2
-              table2.css("tr[2]/td[2]/table").each_with_index do |table3, index3|
+              #table2.css("tr[2]/td[2]/table").each_with_index do |table3, index3|
 
               #if index2 > 1
-                table2.css("tr td a").each_with_index do |item2, index4|
+                table2.css("tr td a").each_with_index do |item2, index3|
                   link = item2.attributes['href'].value
 
-                  if index4 > 0
+                  if index3 > 0
                     text = item2.text
                     href = link
 
@@ -54,7 +54,7 @@ class BasePage
                     list << MediaItem.new(text, href, additional_info) unless additional_info.nil?
                   end
                 end
-              end
+              #end
             end
           end
         end
@@ -81,13 +81,23 @@ class BasePage
 
     if root
       root.css("td").each do |item|
-        if item.search("table/tr/td/a").size > 0
-          link = item.css("table tr td a").first
+        node1 = item.search("table/tr/td")
+        node2 = item.search("table/tr/td[2]")
+        if node1.search("a").size > 0
+          link = node1.css("a").first
 
           text = link.text
           href = link.attributes['href'].value
 
-          list << MediaItem.new(text, href)
+          if node2.search("#SPAN_all_letters").size > 0
+            additional_info = node2.search("#SPAN_all_letters").at(0).inner_html
+            index = additional_info.index('<a href="#"')
+            additional_info = additional_info[0..index-2].strip + "]"
+          else
+            additional_info = nil
+          end
+
+          list << MediaItem.new(text, href, additional_info)
         end
       end
     end

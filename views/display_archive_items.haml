@@ -1,14 +1,3 @@
-%p
-  =title.nil? ? page.title : title
-  = partial 'shared/search'
-  %br
-    
-= partial 'shared/navigation_menu', :locals => {:page => page}
-
-= partial 'shared/category_breadcrumbs', :locals => {:page => page}
-
-= partial 'shared/categories', :locals => {:page => page}
-
 %table{:border => "0"}
   %tr
   - page.title_items.each do |item|
