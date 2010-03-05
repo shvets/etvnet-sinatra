@@ -1,4 +1,4 @@
-%table
+%table#channel_items
   - page.items.each do |item|
     %tr
       %td
@@ -6,4 +6,5 @@
       %td
         %a{ :href => item.link }="Today"
       %td
-        %a{ :href => item.archive_link }="Archive"
+        -if item.archive_link
+          %a{ :href => item.archive_link }="Archive"

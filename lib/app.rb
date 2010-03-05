@@ -3,6 +3,7 @@ require 'rubygems' unless RUBY_VERSION =~ /1.9.*/
 require 'sinatra'
 require 'sinatra/base'
 require 'haml'
+require 'sass'
 require 'open-uri'
 require 'json'
 
@@ -32,7 +33,7 @@ class App < Sinatra::Application
   end
 
   get '/stylesheet.css' do
-    header 'Content-Type' => 'text/css; charset=utf-8'
+    headers 'Content-Type' => 'text/css; charset=utf-8'
     sass :stylesheet
   end
 
@@ -96,9 +97,13 @@ class App < Sinatra::Application
 
         haml :display_channel_items, :locals => {:page => page, :title => title}
       when /action=view_recommended/ then
-        page = PageFactory.create("media", url)
+        page = PageFactory.create("archive_media", url)
 
-        haml :display_browse_items, :locals => {:page => page, :title => "We Recommend"}
+        haml :display_archive_items, :locals => {:page => page, :title => "We Recommend"}
+      when /action=today/ then
+        title = "Today List" + (title.nil? ? "" : ": #{title}")
+        page = PageFactory.create("media", url)
+        haml :display_browse_items, :locals => {:page => page, :title => title}
       else
         page = PageFactory.create("archive_media", url)
 

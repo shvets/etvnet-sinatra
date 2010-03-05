@@ -1,4 +1,4 @@
-%table{:border => "0"}
+%table#archive_items{:border => "0"}
   %tr
   - page.title_items.each do |item|
     %td
@@ -12,7 +12,7 @@
         %img{:src => "#{Page::BASE_URL}/#{item.rating_image}"}
       %td
         =item.rating
-      %td
+      %td#name
         =display_link_or_folder(item)
       %td
         =item.year

@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="f3ec8728-8b4c-4852-8d7c-b78c72b87864" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.haml" afterPath="$PROJECT_DIR$/views/layout.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/display_browse_items.haml" afterPath="$PROJECT_DIR$/views/display_browse_items.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/display_archive_items.haml" afterPath="$PROJECT_DIR$/views/display_archive_items.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/base_page.rb" afterPath="$PROJECT_DIR$/lib/base_page.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/simple_layout.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/stylesheet.sass" afterPath="$PROJECT_DIR$/views/stylesheet.sass" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/display_items.haml" afterPath="$PROJECT_DIR$/views/display_items.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.haml" afterPath="$PROJECT_DIR$/views/layout.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/shared/_search.haml" afterPath="$PROJECT_DIR$/views/shared/_search.haml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/media.haml" afterPath="$PROJECT_DIR$/views/display_media.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/app.rb" afterPath="$PROJECT_DIR$/lib/app.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/display_browse_items.haml" afterPath="$PROJECT_DIR$/views/display_browse_items.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/base_page.rb" afterPath="$PROJECT_DIR$/lib/base_page.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/display_archive_items.haml" afterPath="$PROJECT_DIR$/views/display_archive_items.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/display_channel_items.haml" afterPath="$PROJECT_DIR$/views/display_channel_items.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/stylesheet.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/display_media.haml" afterPath="$PROJECT_DIR$/views/display_media.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/workspace.xml" />
@@ -37,55 +36,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="layout.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/layout.haml">
+      <file leaf-file-name="display_media.haml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/display_media.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="31" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="simple_layout.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/simple_layout.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="100" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base_page.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/base_page.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="79" selection-start="844" selection-end="844" vertical-scroll-proportion="0.06443914">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="engine.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../.rvm/gems/ruby/1.8.7/gems/haml-2.2.20/lib/haml/engine.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="182" column="0" selection-start="6261" selection-end="6261" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="media_item.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../.rvm/gems/ruby/1.8.7/gems/etvnet_seek-0.4.0/lib/etvnet_seek/core/media_item.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="display_items.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/display_items.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="1" column="60" selection-start="93" selection-end="93" vertical-scroll-proportion="0.03818616">
               <folding />
             </state>
           </provider>
@@ -100,19 +54,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/app.rb">
+      <file leaf-file-name="layout.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/layout.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="1207" selection-end="1207" vertical-scroll-proportion="18.961538">
+            <state line="5" column="21" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="display_media.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/display_media.haml">
+      <file leaf-file-name="stylesheet.sass" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/stylesheet.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="13" column="10" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base_page.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/base_page.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="4" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/app.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="84" column="0" selection-start="2140" selection-end="2140" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -121,7 +93,34 @@
       <file leaf-file-name="display_archive_items.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/display_archive_items.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="22" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
+            <state line="14" column="14" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="display_browse_items.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/display_browse_items.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="14" selection-start="201" selection-end="206" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="display_channel_items.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/display_channel_items.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="display_items.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/display_items.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="14" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -141,18 +140,18 @@
         <option value="$PROJECT_DIR$/views/shared/_categories.haml" />
         <option value="$PROJECT_DIR$/views/shared/_category_breadcrumbs.haml" />
         <option value="$PROJECT_DIR$/views/shared/_navigation_menu.haml" />
-        <option value="$PROJECT_DIR$/views/stylesheet.sass" />
         <option value="$PROJECT_DIR$/views/media.haml" />
         <option value="$PROJECT_DIR$/views/login_layout.haml" />
-        <option value="$PROJECT_DIR$/views/display_archive_items.haml" />
-        <option value="$PROJECT_DIR$/views/layout.haml" />
         <option value="$PROJECT_DIR$/views/shared/_search.haml" />
-        <option value="$PROJECT_DIR$/views/display_browse_items.haml" />
+        <option value="$PROJECT_DIR$/views/layout.haml" />
         <option value="$PROJECT_DIR$/views/display_channel_items.haml" />
-        <option value="$PROJECT_DIR$/views/display_items.haml" />
-        <option value="$PROJECT_DIR$/views/display_media.haml" />
         <option value="$PROJECT_DIR$/lib/app.rb" />
         <option value="$PROJECT_DIR$/lib/base_page.rb" />
+        <option value="$PROJECT_DIR$/views/stylesheet.sass" />
+        <option value="$PROJECT_DIR$/views/display_browse_items.haml" />
+        <option value="$PROJECT_DIR$/views/display_archive_items.haml" />
+        <option value="$PROJECT_DIR$/views/display_items.haml" />
+        <option value="$PROJECT_DIR$/views/display_media.haml" />
       </list>
     </option>
   </component>
@@ -252,8 +251,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
       <pane id="Scope" />
+      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -270,14 +269,14 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="180" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="159" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="953" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="953" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="184" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="150" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="150" />
     <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
   </component>
   <component name="RunManager" selected="Ruby.start">
@@ -344,6 +343,13 @@
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method />
     </configuration>
+    <configuration default="true" type="RubyRemoteDebugConfigurationType" factoryName="Ruby remote debug">
+      <RUBY_REMOTE_DEBUG_CONFIG NAME="REMOTE_HOST" VALUE="localhost" />
+      <RUBY_REMOTE_DEBUG_CONFIG NAME="PORT" VALUE="1234" />
+      <RUBY_REMOTE_DEBUG_CONFIG NAME="REMOTE_ROOT" VALUE="" />
+      <RUBY_REMOTE_DEBUG_CONFIG NAME="LOCAL_ROOT" VALUE="" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda">
       <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
       <module name="" />
@@ -360,13 +366,6 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="INHERITANCE_CHECK_DISABLED" VALUE="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="RubyRemoteDebugConfigurationType" factoryName="Ruby remote debug">
-      <RUBY_REMOTE_DEBUG_CONFIG NAME="REMOTE_HOST" VALUE="localhost" />
-      <RUBY_REMOTE_DEBUG_CONFIG NAME="PORT" VALUE="1234" />
-      <RUBY_REMOTE_DEBUG_CONFIG NAME="REMOTE_ROOT" VALUE="" />
-      <RUBY_REMOTE_DEBUG_CONFIG NAME="LOCAL_ROOT" VALUE="" />
       <method />
     </configuration>
     <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
@@ -423,10 +422,10 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24899867" sideWeight="0.5482353" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4435294" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282353" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287841" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282353" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287841" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -771,7 +770,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/../../ui/src/spec/functional/amdocs/phone_number_gateway_spec.rb</url>
-          <line>181</line>
+          <line>192</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/../../ui/src/app/services/amdocs/resource_gateway.rb</url>
@@ -789,14 +788,35 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/stylesheet.sass">
+    <entry file="file://$PROJECT_DIR$/../../../.rvm/gems/ruby/1.8.7/gems/haml-2.2.20/lib/haml/engine.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="26" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0">
+        <state line="182" column="0" selection-start="6261" selection-end="6261" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/login.haml">
+    <entry file="file://$PROJECT_DIR$/../../../.rvm/gems/ruby/1.8.7/gems/etvnet_seek-0.4.0/lib/etvnet_seek/core/media_item.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/shared/_categories.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/shared/_category_breadcrumbs.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/shared/_navigation_menu.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -805,14 +825,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/shared/_search.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="294" selection-end="294" vertical-scroll-proportion="0.22911695">
+        <state line="5" column="0" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="21" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/app.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="0" selection-start="2140" selection-end="2140" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/base_page.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="4" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/stylesheet.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="10" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/display_browse_items.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="10" column="14" selection-start="201" selection-end="206" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/display_archive_items.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="14" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -826,77 +886,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/display_items.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="3" column="14" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/display_media.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../.rvm/gems/ruby/1.8.7/gems/etvnet_seek-0.4.0/lib/etvnet_seek/core/media_item.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/display_archive_items.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="22" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../.rvm/gems/ruby/1.8.7/gems/sinatra-0.9.4/lib/sinatra/base.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="558" column="0" selection-start="17269" selection-end="17269" vertical-scroll-proportion="0.33174226">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../.rvm/gems/ruby/1.8.7/gems/haml-2.2.20/lib/haml/engine.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="0" selection-start="6261" selection-end="6261" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="31" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/simple_layout.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="100" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/app.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1207" selection-end="1207" vertical-scroll-proportion="18.961538">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/base_page.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="79" selection-start="844" selection-end="844" vertical-scroll-proportion="0.06443914">
+        <state line="1" column="60" selection-start="93" selection-end="93" vertical-scroll-proportion="0.03818616">
           <folding />
         </state>
       </provider>

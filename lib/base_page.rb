@@ -7,7 +7,7 @@ class BasePage
       text = item.children.at(0).content
       href = item['href']
 
-      list <<  MediaItem.new(text, href) unless href =~ /(login|signup|thematic)/
+      list <<  MediaItem.new(text, href) unless href =~ /(login|signup|thematic|action=browse_persons)/
     end
 
     list
@@ -39,28 +39,26 @@ class BasePage
         if index1 == 5
           table1.css("tr/td/table/tr/td/table").each_with_index do |table2, index2|
             if index2 == 2
-              #table2.css("tr[2]/td[2]/table").each_with_index do |table3, index3|
+              table2.css("tr td a").each_with_index do |item3, index3|
+                link = item3.attributes['href'].value
 
-              #if index2 > 1
-                table2.css("tr td a").each_with_index do |item2, index3|
-                  link = item2.attributes['href'].value
+                if index3 > 0
+                  text = item3.text
+                  href = link
 
-                  if index3 > 0
-                    text = item2.text
-                    href = link
+                  additional_info = additional_info(item3, 2)
 
-                    additional_info = additional_info(item2, 2)
-
-                    list << MediaItem.new(text, href, additional_info) unless additional_info.nil?
-                  end
+                  list << MediaItem.new(text, href, additional_info) unless additional_info.nil?
                 end
-              #end
+              end
             end
           end
         end
       end
     end
 
+    list = [] if list.size == 1
+    
     list
   end
 

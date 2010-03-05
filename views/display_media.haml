@@ -1,6 +1,12 @@
+-subject = "Link to translation"
+-body = "Link: &lt;a href='#{link_info.media_info.link}'&gt;#{link_info.media_info.name}&lt;/a&gt;"
 %p
   ="Link:"
   %a{ :href => link_info.media_info.link }=link_info.media_info.name
+  %a{ :href => "mailto:?subject=#{subject}&amp;body=#{body}" }="Email it"
+%p
+  ="RTSP Link:"
+  %a{ :href => link_info.media_info.rtsp_link }=link_info.media_info.name
 
 %p
   ="Latin Name: #{link_info.name}"

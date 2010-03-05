@@ -1,7 +1,7 @@
-%table{:border => "0"}
+%table#items{:border => "0"}
   - page.items.each do |item|
     %tr
-      %td
+      %td#name
         =display_link_or_folder(item)
 
       - if not item.duration.nil? and item.duration.size > 0
