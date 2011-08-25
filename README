@@ -1,2 +1,25 @@
 This application is hosted at Heroku Garden: http://etvnet.heroku.com
 
+= Etvnet Seek -- Command line tool for getting mms urls from etvnet service.
+
+= Installing Etvnet Sinatra Application and command line utility
+
+== Installing the Gem
+    $ sudo gem sources -a http://gemcutter.org
+    $ sudo gem install etvnet
+
+== Usage
+
+Usage: etvnet-seek [options] keywords
+    -s, --search                     Display Search Menu
+    -t, --translit                   Enter russian keywords in translit
+    -b, --best-hunred                Display Best 100 Menu
+    -n, --new_items                  Display New Items Menu
+    -p, --premier                    Display Premier of the Week Menu
+    -c, --channels                   Display Channels Menu
+    -a, --catalog                    Display Catalog Menu
+    -m, --main                       Display Main Menu
+    -h, --help                       Display this screen
+
+
+Usage: etvnet - to start sinatra application

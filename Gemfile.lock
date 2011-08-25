@@ -1,0 +1,77 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    configuration (1.2.0)
+    diff-lcs (1.1.2)
+    gemcutter (0.6.1)
+    git (1.2.5)
+    haml (3.0.24)
+    heroku (1.14.10)
+      json_pure (>= 1.2.0, < 1.5.0)
+      launchy (~> 0.3.2)
+      rest-client (>= 1.4.0, < 1.7.0)
+    highline (1.6.1)
+    jeweler (1.5.1)
+      bundler (~> 1.0.0)
+      git (>= 1.2.5)
+      rake
+    json_pure (1.4.6)
+    launchy (0.3.7)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
+    libxml-ruby (1.1.4)
+    linecache (0.43)
+    mime-types (1.16)
+    mocha (0.9.10)
+      rake
+    nokogiri (1.4.4)
+    rack (1.2.1)
+    rake (0.8.7)
+    rcov (0.9.9)
+    rest-client (1.6.1)
+      mime-types (>= 1.16)
+    rspec (2.2.0)
+      rspec-core (~> 2.2)
+      rspec-expectations (~> 2.2)
+      rspec-mocks (~> 2.2)
+    rspec-core (2.3.0)
+    rspec-expectations (2.3.0)
+      diff-lcs (~> 1.1.2)
+    rspec-mocks (2.3.0)
+    ruby-debug-base (0.10.4)
+      linecache (>= 0.3)
+    ruby-debug-ide (0.4.16)
+      rake (>= 0.8.1)
+    rubyzip (0.9.4)
+    sinatra (1.1.0)
+      rack (~> 1.1)
+      tilt (~> 1.1)
+    tilt (1.1)
+    vegas (0.1.8)
+      rack (>= 1.0.0)
+    zipit (0.3.4)
+      rubyzip (>= 0.9.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  gemcutter
+  haml
+  heroku
+  highline
+  jeweler
+  json_pure
+  launchy
+  libxml-ruby
+  mocha
+  nokogiri
+  rack
+  rake
+  rcov
+  rspec
+  ruby-debug-base
+  ruby-debug-ide
+  sinatra
+  vegas
+  zipit

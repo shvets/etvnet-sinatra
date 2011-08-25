@@ -1,0 +1,4 @@
+%table#items{:border => "0"}
+  - page.items.each do |item|
+    %tr
+      %td#name=display_link_or_folder(item)

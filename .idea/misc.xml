@@ -6,7 +6,10 @@
   <component name="ProjectDetails">
     <option name="projectName" value="etvnet" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Ruby SDK 1.8.7 (/Users/oshvets/.rvm/ruby-1.8.7-p174/bin/ruby)" project-jdk-type="RUBY_SDK" />
+  <component name="ProjectResources">
+    <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Ruby SDK 1.8.7-p302 [etvnet]" project-jdk-type="RUBY_SDK" />
   <component name="SvnBranchConfigurationManager">
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>

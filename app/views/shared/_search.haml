@@ -1,0 +1,7 @@
+%form{ :action => '/search/', :method => "get" }
+  -#%input{ :type => 'hidden', :name => 'order_direction', :value => '-' }
+  %input#q{ :name => 'q' }
+
+  %button{:type => "submit"}="Search"
+
+%br

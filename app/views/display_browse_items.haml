@@ -1,0 +1,19 @@
+%table#browse_items{:border => "0"}
+  %tr
+  - page.title_items.each do |item|
+    %td
+      =display_link_or_text(item)
+
+  - page.items.each do |item|
+    %tr
+      %td=item.showtime
+
+      %td#name=display_link_or_folder(item)
+
+      %td=item.year
+
+      - if not item.duration.nil? and item.duration.size > 0
+        %td=item.duration
+
+        %td=item.channel
+

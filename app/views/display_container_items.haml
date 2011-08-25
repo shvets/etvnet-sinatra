@@ -1,0 +1,27 @@
+= "Description: #{page.description}" if page.description
+
+%table#catalog_items{:border => "0"}
+  %tr
+  - page.title_items.each do |item|
+    %td=display_link_or_text(item)
+
+  - page.items.each do |item|
+    %tr
+      %td=item.showtime
+
+      %td#name=display_link_or_folder(item)
+
+      %td
+        %img{:src => item.rating_image}
+
+      %td=item.rating
+
+      %td=item.duration
+
+      %td=item.year
+
+      -if item.channel
+        %td#channel=item.channel
+
+= partial 'shared/page_browser', :locals => {:page => page}
+

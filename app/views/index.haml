@@ -1,0 +1,27 @@
+%table{:border => "0"}
+  %tr
+    %td#title="Best Hundred"
+    %td#title="New Items"
+    %td#title="Premiere"
+
+  %tr
+    %td
+      %table
+        - best_hundred_page.items.each do |item|
+          %tr
+            %td
+              %a{ :href => item.link }=item.text
+    %td
+      %table
+        %tr
+        - new_items_page.items.each do |item|
+          %tr
+            %td
+              %a{ :href => item.link }=item.text
+    %td
+      %table
+        %tr
+        - premiere_page.items.each do |item|
+          %tr
+            %td
+              %a{ :href => item.link }=item.text

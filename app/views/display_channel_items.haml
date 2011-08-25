@@ -1,0 +1,9 @@
+%table#channel_items
+  - page.items.each do |item|
+    %tr
+      %td
+        %a{ :href => item.link }=item.text
+
+      %td
+        -if item.catalog_link
+          %a{ :href => item.catalog_link }="Catalog"

@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %meta{:'http-equiv' => 'Content-Type', :content => 'text/html; charset=UTF-8'}
+    %title= "ETVNET Client (#{page.title if defined?(page.title)})"
+    %link{ :href =>"/stylesheet.css", :rel => "stylesheet", :type => "text/css", :media => "screen" }
+    %script{:src => "/javascripts/jquery-1.4.1.js", :type => "text/javascript"}
+    %script{:src => "/javascripts/main.js", :type => "text/javascript"}
+  %body
+    #container
+      %p
+        = partial 'shared/search'
+      %p#title=page.page_title if defined?(page.page_title)
+
+      = partial 'shared/navigation_menu', :locals => {:page => page}
+      = partial 'shared/category_breadcrumbs', :locals => {:page => page}
+      = partial 'shared/categories', :locals => {:page => page}
+
+      = yield

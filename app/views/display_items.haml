@@ -1,0 +1,15 @@
+%table#items{:border => "0"}
+  - page.items.each do |item|
+    %tr
+      %td#name=display_link_or_folder(item)
+
+      - if not item.duration.nil? and item.duration.size > 0
+        %td=item.duration
+
+      -if item.rating_image
+        %td
+          %img{:src => item.rating_image}
+          
+      -if item.image
+        %td
+          %img{:src => "#{Page::BASE_URL}/#{item.image}"}

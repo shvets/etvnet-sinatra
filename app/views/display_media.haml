@@ -1,0 +1,42 @@
+-subject = "Link to #{link_info.text}"
+-mms_body = "Link to <a href='#{link_info.link}'>#{link_info.text}</a>"
+-##{link_info.media_info.name}
+/-rtsp_body = "#{link_info.media_info.name}: #{link_info.media_info.rtsp_link}'"
+
+%p
+  ="Link:"
+  %a{ :href => link_info.link }="#{link_info.text}"
+  %a{ :href => "mailto:?subject=#{h(subject)}&amp;body=#{mms_body}" }="Email it"
+
+-#  %form{:action => "mailto:", :method => "get", :enctype => "text/plain"}
+-#    %input{:name => "subject", :type => "hidden", :value => h(subject.gsub(' ', '%20'))}
+-#    %input{:name => 'body', :type => "hidden", :value => h(mms_body)}
+-#
+-#    %input{:type => "submit", :value => "Email it"}
+
+-#%p
+-#  ="RTSP Link:"
+-#  %a{ :href => link_info.media_info.rtsp_link }=link_info.media_info.name
+-#  %a{ :href => "mailto:?subject=#{subject}&amp;body=#{rtsp_body}" }="Email it"
+
+
+= page.info_movie_breadcrumbs
+%br
+
+%table
+  %tr
+    - page.info_movie_screenshots[0..5].each do |ss|
+      %td
+        %img{:src => ss}
+
+%p#description= page.info_movie_descripton
+
+= page.info_movie_additional_info
+= page.info_movie_additional_info2
+
+= partial 'shared/see_too_items', :locals => {:page => page}
+
+
+
+
+

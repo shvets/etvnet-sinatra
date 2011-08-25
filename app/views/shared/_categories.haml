@@ -1,0 +1,12 @@
+%table
+  - cnt = 0
+  - page.categories.each do |item|
+    ="<tr>" if cnt == 0
+    %td
+      %a{ :href => item.link }=item.text
+      =item.additional_info if item.additional_info
+    ="</tr>" if cnt == 3
+    - cnt += 1
+
+-if page.categories.size > 0
+  %br

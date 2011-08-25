@@ -1,0 +1,26 @@
+
+= Etvnet-seek Gem Changelog
+
+== Version 0.1.0
+
+* Initial release.
+
+== Version 0.2.0
+
+* Bug fixes, code for Windows
+
+== Version 0.3.0
+
+* Bug fixes, support for Runglish (you can enter russian string as latin one)
+
+== Version 0.4.0
+
+* Bug fixes, adding support for main menu
+
+== Version 0.5.0
+
+* Bug fixes, adding support for main menu
+
+== Version 0.7.0
+
+* Customized for new version of web site
